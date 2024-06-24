@@ -36,7 +36,7 @@
   --text-dim: #45aaff;
   --text-faint: #7aa2f7;
   --text-title-h1: #bbb;
-  --text-title-h2: #cbdbe5;
+  --text-title-h2: var(--text-accent);
   --text-title-h3: #cbdbe5;
   --text-title-h4: #cbdbe5;
   --text-title-h5: #cbdbe5;
@@ -469,17 +469,48 @@ span.cm-formatting-list,
 .markdown-preview-section h1, .cm-header-1 {
   font-weight: 900;
   font-family: 'Kanit', sans-serif;;
-  letter-spacing: 0.5px;
   word-spacing: 4px;
   font-size: 36px;
   color: var(--text-title-h1);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: .3px;
   word-spacing: 2.4px;
-  margin:2vh 0 6vh 0;
 }
 
+.markdown-preview-section h1,
+.cm-header-1 {
+  font-size: 40px;
+  letter-spacing: 0.7px;
+}
+
+.markdown-preview-view h1 {
+  margin: 1rem 0 2.5rem 0;
+}
+
+/* H2 */
 .HyperMD-header.HyperMD-header-2,
+.markdown-preview-section h2, .cm-header-2 {
+  font-family: 'Kanit', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.50px;
+  font-size: 30px;
+  word-spacing: 4px;
+  letter-spacing: 0.7px;
+  color: var(--text-title-h2);
+}
+
+.HyperMD-header.HyperMD-header-2 {
+  border-bottom: 2px dotted rgba(14, 210, 247, 0.3);
+}
+
+.markdown-preview-view h2 {
+  margin: 2rem 0 2.2rem 0;
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 2px dotted rgba(14, 210, 247, 0.3);
+}
+
+
 .HyperMD-header.HyperMD-header-3,
 .HyperMD-header.HyperMD-header-4,
 .HyperMD-header.HyperMD-header-5,
@@ -494,16 +525,6 @@ span.cm-formatting-list,
   padding: 20px;
 }
 
-.markdown-preview-section h1,
-.cm-header-1 {
-  font-size: 40px;
-}
-
-.markdown-preview-section h2,
-.cm-header-2 {
-  font-size: 26px;
-  color: var(--text-title-h2);
-}
 
 .markdown-preview-section h3,
 .cm-header-3 {
@@ -530,12 +551,11 @@ span.cm-formatting-list,
 }
 
 /** headings */
-.markdown-preview-view h2,
+/* .markdown-preview-view h2,
 .markdown-preview-view h3,
 .markdown-preview-view h4,
 .markdown-preview-view h5,
 .markdown-preview-view h6 {
-  /* padding-top: 1.25rem; */
   margin: 45px 0 20px 0;
   position: relative;
   padding-bottom: 10px;
@@ -543,7 +563,7 @@ span.cm-formatting-list,
   border-width: 35%;
   border-image-slice: 1;
   border-image-source: linear-gradient(to right, var(--text-sub-accent), #100e17, #100e17, #100e17);
-}
+} */
 
 .view-header-icon {
   color: var(--text-accent);
